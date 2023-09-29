@@ -1,34 +1,108 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title> Searching Tool</title>
+        <title> Treating Waters International</title>
         <style> 
-        h1{color:dodgerblue;}
-        body{background-color:aliceblue;}
-        </style>
+        h1{color:dodgerblue;text-align:center;}
+        h2{text-align:center;}
+        /*body{background-color:aliceblue;}*/
+        form {
+            background-color:cornflowerblue;
+            width: 300px;
+            height: 44px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        input {
+            all: unset;
+            font: 16px system-ui;
+            color: #fff;
+            height: 100%;
+            width: 100%;
+            padding: 6px 10px;
+        }
+        ::placeholder {
+            color: #fff;
+            opacity: 0.7; 
+        }
+        button {
+            all: unset;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+        }
+
+        svg {
+            color: #fff;
+            fill: currentColor;
+            width: 24px;
+            height: 24px;
+            padding: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
     </head>
     <body>
         <h1> Drinking Water Contamination and Treatment </h1>
-        <p> The objective of this website is to assist you 
-            in swiftly identifying water treatment methods 
-            based on the specific contaminants you are dealing with.</p>
-        <hr />
+        <p>&emsp; The objective of this website is to assist you 
+            in identifying water treatment methods based on 
+            the specific characteristics of your water. 
+            Please type in the specific contaminants in your 
+            water and our program will give you currently 
+            available treatment methods.</p>
+        <br>
         <h2> Searching Tool</h2>
-        <h5> This will be a search bar</h5>
+        <!--This is a search bar-->
+        <form id="form" role="search">
+            <input type="search" id="query" name="q"
+             placeholder="Add items..."
+             aria-label="Search through site content">
+             <button>
+                <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+              </button>  
+        </form>
+        <br>
+        <table>
+            <tr>
+              <td>&ensp; <b>Contaminants</b> &ensp;</td>
+              <td>&ensp;  &ensp;</td>
+            </tr>
+            <tr>
+              <td>&ensp; //somthing added &ensp; </td>
+              <td>&ensp; delete &ensp; </td>
+            </tr>
+        </table>
+        <br><br>
         <h3> Result: </h3>
-        <h5> Result will show up here. :D</h5>
+        <h5> After searching in the database, the result will show up here. :D</h5>
+        <table>
+            <tr>
+              <td>&ensp; <b>Contaminants</b> &ensp;</td>
+              <td>&ensp; <b>Treatment Methods</b> &ensp;</td>
+            </tr>
+            <tr>
+              <td>&ensp; //somthing added &ensp; </td>
+              <td>&ensp; result from database &ensp; </td>
+            </tr>
+        </table>
+        <br>
         <hr />
         <h4> About Us: </h4>
-        <p> This website is owned and operated by a distinguished
-             water research team under the leadership of Dr. Wong
+        <p> This website is owned and operated by a water 
+            research team under the leadership of Dr. Wong
             at Biola University.</p>
         <p> Interested in learning more about <b>Biola University</b>? We invite you to explore further 
             by visiting our official school website at 
             <a href="https://biola.edu"> biola.edu</a>.
         </p>
-        <hr />
+        <br>
         <h4> Contact Us: </h4>
 
         <p> Email: elaine.wong@biola.edu</p>
