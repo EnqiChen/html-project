@@ -2,9 +2,33 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
         <title> Treating Waters International</title>
-        <style> 
-        h1{color:dodgerblue;text-align:center;}
+        <style>   
+        .navbar-right .p-2{
+            color:#aacfdd;
+        }
+        .b_g{
+        position: relative;
+        text-align: center;
+        background-image: url("p_w.jpg");
+        }
+        .text-center{
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            transform: translate(-20%, 40%);
+        }
+        .text-below{
+            position: absolute;
+            top: 30%;
+            left: 39%;
+            transform: translate(-20%, 40%);
+        }
+        h1{color:black;text-align:center;}
         /*body{background-color:aliceblue;}*/
         form {
             background-color:cornflowerblue;
@@ -46,20 +70,82 @@
             border: 1px solid black;
             border-collapse: collapse;
         }
+        #Info{
+          background-color:cornflowerblue;
+          padding: 20px;
+        }
+        #search_tool{
+          padding:0 40px 0 40px;
+        }
+        #search_bar{
+          padding:0 40px;
+        }
+        #input_table{
+          padding:0 40px;
+        }
+        #output_table{
+          padding:0 40px;
+        }
+        
     </style>
     </head>
     <body>
-        <h1> Drinking Water Contamination and Treatment </h1>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <!-- navbar -->
+        <div id="nav_bar">
+	      <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(71, 125, 225);">
+        <a class="navbar-brand" href="#" style="color:#dde9f1">
+        Treating Waters International
+        </a>
+  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active" >
+              <a class="nav-link" href="home.php" style="color:white">Home <span class="sr-only">(current)</span></a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about_beijing.php" style="color:white">Water Treatment Database Search Tool</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="attractions.php" style="color:white">Our Projects</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="travel_suggestions.php" style="color:white">About Us</a>
+          </li>
+          </ul>
+          </div>
+        </nav>
+      </div>
+        <h3> /logo/</h3>
+
+        <!-- background photo -->
+        <div class="b_g" id="bg-img">
+          <h1 class="text-center"> Treating Waters International</h1>
+          <h3 class="text-below" > "helping to bring potable water to the nations"</h3>
+              <img src="p_w.jpeg" alt="water_bg" width="100%">
+        </div>
+        <!--<h1> Drinking Water Contamination and Treatment </h1>
+        Treating Waters International/Drinking Water Contamination and Treatment-->
         <p>&emsp; The objective of this website is to assist you 
             in identifying water treatment methods based on 
             the specific characteristics of your water. 
             </p>
         <br>
-        <h2> Searching Tool</h2>
+      <div id="search_tool">
+        <h2> Water Treatment Database Search Tool</h2>
         <p>Please type in the specific contaminants in your 
             water blow. Our program will give you currently 
             available treatment methods.
         </p>
+      </div>
+      <div id="search_bar">
         <!--This is a search bar-->
         <form id="form" role="search">
             <input type="search" id="query" name="q"
@@ -69,7 +155,9 @@
                 <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
               </button>  
         </form>
+      </div>
         <br>
+      <div id="input_table">
         <table>
             <tr>
               <td>&ensp; <b>Contaminants</b> &ensp;</td>
@@ -80,7 +168,9 @@
               <td>&ensp; delete &ensp; </td>
             </tr>
         </table>
+      </div>
         <br><br>
+      <div id="output_table">
         <h3> Result: </h3>
         <p>Summary of treatment methods: </p>
         <table>
@@ -93,21 +183,31 @@
               <td>&ensp; result from database &ensp; </td>
             </tr>
         </table>
+      </div>
         <br>
+        
         <hr />
-        <h4> About Us: </h4>
-        <p> This website is owned and operated by a water 
-            research team under the leadership of Dr. Wong
-            at Biola University.</p>
-        <p> Interested in learning more about <b>Biola University</b>? We invite you to explore further 
-            by visiting our official school website at 
-            <a href="https://biola.edu"> biola.edu</a>.
-        </p>
+        <!--about us and other information-->
+      <div id="Info">
+        <div id="About_us" style="color:white">
+            <h4> About Us: </h4>
+          <p> This website is owned and operated by a water 
+              research team under the leadership of Dr. Wong
+              at Biola University.</p>
+          <p> Interested in learning more about <b>Biola University</b>? We invite you to explore further 
+              by visiting our official school website at 
+              <a href="https://biola.edu" style="color:white" > <u>biola.edu</u></a>.
+          </p>
+        </div>
+        
         <br>
-        <h4> Contact Us: </h4>
+        <div id="Contact_us" style="color:white">
+          <h4> Contact Us: </h4>
 
-        <p> Email: elaine.wong@biola.edu</p>
-        <p> Phone: (562)9440351 x. 3251</p>
-        <p> Address: 13800 Biola Ave, La Mirada CA 90639</p>
+          <p> Email: elaine.wong@biola.edu</p>
+          <p> Phone: (562)9440351 x. 3251</p>
+          <p> Address: 13800 Biola Ave, La Mirada CA 90639</p>
+        </div>
+      </div>
     </body>
 </html>
